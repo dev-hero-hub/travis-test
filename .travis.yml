@@ -4,7 +4,7 @@ jdk:
   - openjdk8
   - openjdk9
   - openjdk11
-  - openjdk16
+  - openjdk15
 os:
   - linux
   - osx
