@@ -4,9 +4,14 @@ jdk:
   - openjdk8
   - openjdk9
   - openjdk11
+  - openjdk16
 os:
   - linux
   - osx
+matrix:
+  exclude:
+    - os: osx
+      jdk: openjdk8
 script:
   - ./mvnw install -DskipTests=true 
   - ./mvnw test
