@@ -1,17 +1,12 @@
 dist: bionic
-
 language: java
-
 jdk:
   - openjdk8
   - openjdk9
   - openjdk11
-
 os:
   - linux
   - osx
-  - windows
-
 script:
   - ./mvnw install -DskipTests=true 
-  - ./mvnw 
+  - ./mvnw test
