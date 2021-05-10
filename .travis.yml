@@ -11,6 +11,7 @@ matrix:
   exclude:
     - os: osx
       jdk: openjdk8
-script:
+install:
   - ./mvnw install -DskipTests=true 
+script:
   - ./mvnw test
