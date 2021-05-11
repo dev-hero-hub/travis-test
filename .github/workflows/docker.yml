@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: mvn install
+      run: ./mvnw install -DskipTests=true
+    - name: mvn build
+      run: ./mvnw build
     - name: docker build
-      run:
-        ./mvnw install -DskipTests=true
-        ./mvnw build
-        docker build -t streamflow ./
+      run: docker build -t streamflow ./
