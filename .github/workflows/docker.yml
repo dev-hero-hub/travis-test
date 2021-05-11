@@ -7,4 +7,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: docker build
       run:
+        ./mvnw install -DskipTests=true
+        ./mvnw build
         docker build -t streamflow ./
